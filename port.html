@@ -1,0 +1,497 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio</title>
+    <style>
+        body {
+            background-image: url('4k-blue-minimalist-deer-5fc2dalaakntatt7.jpg');
+            background-size: cover;
+            background-position: top; /* Adjusted background position to display from the top */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #000000; /* Text color */
+        }
+
+
+        header {
+            padding: 20px;
+            text-align: left;
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+        }
+
+
+            /* Style for header title */
+            header h1 {
+                font-size: 3em; /* Increased font size */
+                margin: 0;
+                align-items: center;
+                transform: translateY(20%);
+                font-family: 'Allura', cursive; /* Use the Allura font */
+            }
+
+        .navigation {
+            display: flex;
+            justify-content: flex-end; /* Align items to the right */
+            align-items: center;
+        }
+
+
+            .navigation a {
+                color: #fff;
+                text-decoration: none;
+                padding: 10px;
+                margin-left: 10px;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                transition: all 0.3s ease;
+            }
+
+
+        .container_1 {
+            display: flex;
+            align-items: center;
+            border-radius: 10px; /* Added border radius */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+        }
+
+        .image_1 {
+            max-width: 450px; /* Increased maximum width */
+            height: auto;
+            margin-right: 40px; /* Increased margin between image and description */
+            border-radius: 10px; /* Added border-radius for a rounded image */
+            opacity: 0.8; /* Reduced opacity to blend with the background */
+        }
+
+        .description_1 {
+            flex: 1;
+            padding: 20px;
+            text-align: justify; /* Justify text for a clean look */
+            font-size: 1.1em; /* Adjust font size */
+            line-height: 1.6; /* Adjust line height for readability */
+        }
+
+        .header_3 {
+            font-size: 2em;
+        }
+
+        .container_2 {
+            display: flex;
+            align-items: center;
+            border-radius: 10px; /* Added border radius */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+            overflow: hidden; /* Ensure the container clips the image and description */
+        }
+
+        .image_2 {
+            max-width: 100%; /* Increased maximum width */
+            width: 400px;
+            height: 250px;
+            margin-right: 100px; /* Increased margin between image and description */
+            border-radius: 10px; /* Added border-radius for a rounded image */
+            opacity: 0.8; /* Reduced opacity to blend with the background */
+        }
+
+        .description_2 {
+            flex: 1;
+            padding: 20px;
+            margin-left: 40px;
+            text-align: justify; /* Justify text for a clean look */
+            font-size: 1.1em; /* Adjust font size */
+            line-height: 1.6; /* Adjust line height for readability */
+        }
+
+        .Skillz {
+            font-size: 2em;
+            margin-left: 20px;
+        }
+
+        .skills {
+            margin-top: 20px;
+        }
+
+        .skill {
+            margin-bottom: 15px;
+            margin-left: 20px;
+        }
+
+            .skill h4 {
+                margin-bottom: 5px;
+                color: #333;
+            }
+
+        .bar {
+            background-color: #f0f0f0;
+            height: 20px;
+            width: 40%;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: #4caf50;
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: width 0.5s ease;
+        }
+
+        .description {
+            font-size: 14px;
+            margin-top: 5px;
+            padding: 5px 10px;
+            background-color: #333;
+            color: #fff;
+            border-radius: 5px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -150px;
+            width: 150px;
+            text-align: center;
+        }
+
+        .skill-description {
+            font-size: 16px;
+            flex: 1;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            position: absolute;
+            transform: translateY(-92%);
+            line-height: 1.6;
+            right: -720px;
+            top: 0;
+            width: 600px; /* Adjust the width as needed */
+        }
+
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            margin-bottom: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+        }
+
+            .social-icons a {
+                margin: 0 10px;
+                display: inline-block;
+            }
+
+            .social-icons img {
+                width: 40px;
+                height: 40px;
+            }
+
+        .footer-bottom p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .footer-bottom {
+            background-color: #222;
+            padding: 10px 0;
+        }
+
+        .glow-on-hover {
+            width: 220px;
+            height: 50px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+        }
+
+            .glow-on-hover:before {
+                content: '';
+                background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+                position: absolute;
+                top: -2px;
+                left: -2px;
+                background-size: 400%;
+                z-index: -1;
+                filter: blur(5px);
+                width: calc(100% + 4px);
+                height: calc(100% + 4px);
+                animation: glowing 20s linear infinite;
+                opacity: 0;
+                transition: opacity .3s ease-in-out;
+                border-radius: 10px;
+            }
+
+            .glow-on-hover:active {
+                color: #000
+            }
+
+                .glow-on-hover:active:after {
+                    background: transparent;
+                }
+
+            .glow-on-hover:hover:before {
+                opacity: 1;
+            }
+
+            .glow-on-hover:after {
+                z-index: -1;
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: #111;
+                left: 0;
+                top: 0;
+                border-radius: 10px;
+            }
+
+        .Project {
+            font-size: 2.3em;
+            margin-bottom: 40px;
+            color: #333;
+            text-align: center;
+        }
+
+        .Projects {
+            max-width: 800px;
+            font-size: 1.3em;
+            margin-top: 10px;
+            margin: 0 auto;
+            padding: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .project-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+            .project-container img {
+                width: 350px;
+                height: auto;
+                margin-bottom: 10px;
+            }
+
+        .contact-details {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #fff; /* Change text color to white */
+        }
+
+            .contact-details p {
+                margin: 10px 0;
+                padding: 8px 15px;
+                background-color: #20B2AA; /* Semi-transparent black background */
+                border-radius: 20px; /* Oval background */
+                display: inline-block;
+                margin-bottom: 5em;
+                color: #fff; /* Change text color to white */
+            }
+
+        .detail-type {
+            font-weight: bold;
+        }
+
+        .contacts-title {
+            margin-top: 50px;
+            font-size: 2em; /* Change font size */
+            color: #fff; /* Change text color to white */
+            font-family: Arial, sans-serif;
+            padding: 8px 15px;
+            background-color: #20B2AA; /* background color */
+            border-radius: 20px; /* Oval background */
+            display: inline-block;
+        }
+
+
+
+        .instagram-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #405DE6;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+            .instagram-button:hover {
+                background-color: #6C5CE7;
+            }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Yash Sute</h1>
+        <nav>
+            <div class="navigation">
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="achievements.html">Achievements</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container_1">
+        <img src="1.JPG" alt="Image Description" class="image_1">
+        <div class="description_1">
+            <h2>Hello Everyone</h2>
+            <p>
+                I'm Yash Sute an AI engineer, I specialize in developing cutting-edge artificial intelligence solutions that drive innovation and solve complex problems. Leveraging my expertise in machine learning, deep learning, and neural networks, I design and implement intelligent algorithms that enable automation, predictive analysis, and personalized user experiences. With a strong foundation in computer science and a passion for pushing the boundaries of technology, I thrive on tackling challenges and creating impactful solutions that positively impact businesses and society as a whole. Let's collaborate and bring transformative AI ideas to life!
+
+            </p>
+            <p>
+                <button id="downloadResumeBtn" class="glow-on-hover">Download Resume</button>
+            </p>
+        </div>
+
+    </div>
+
+    <div class="container_2">
+        <div class="description_2">
+            <h3 class="header_3">What I've Learned in AI</h3>
+            <p>
+                <ul>
+                    <li>Mastered various AI domains including machine learning, natural language processing (NLP), computer vision, and deep learning.</li>
+                    <li>Developed skills in designing and implementing innovative AI solutions.</li>
+                    <li>Gained experience in implementing cutting-edge algorithms and techniques to solve complex problems.</li>
+                    <li>Demonstrated capability in delivering impactful results across diverse domains by applying AI techniques.</li>
+                    <li>Committed to continuous learning and staying updated with the latest advancements in AI technology.</li>
+                    <li>Dedicated to pushing the boundaries of AI innovation and exploring new possibilities in the field.</li>
+                </ul>
+            </p>
+        </div>
+        <img src="2.jpeg" alt="Image Description" class="image_2">
+    </div>
+
+
+
+
+    <div class="skills">
+        <h2 class="Skillz">Skills</h2>
+        <div class="skill">
+            <h4>Machine Learning</h4>
+            <div class="bar">
+                <div class="progress" style="width: 90%;"></div>
+            </div>
+
+        </div>
+        <div class="skill">
+            <h4>Natural Language Processing (NLP)</h4>
+            <div class="bar">
+                <div class="progress" style="width: 85%;"></div>
+            </div>
+
+        </div>
+        <div class="skill">
+            <h4>Computer Vision</h4>
+            <div class="bar">
+                <div class="progress" style="width: 80%;"></div>
+            </div>
+
+        </div>
+        <div class="skill">
+            <h4>AWS (Amazon Web Services)</h4> <!-- New skill added -->
+            <div class="bar">
+                <div class="progress" style="width: 60%;"></div> <!-- Adjust proficiency level as needed -->
+            </div>
+
+        </div>
+        <div class="skill">
+            <h4>Deep Learning</h4>
+            <div class="bar">
+                <div class="progress" style="width: 88%;"></div>
+                <p class="skill-description">These skills are essential in today's technological landscape, empowering the development of advanced AI solutions that drive innovation and solve complex problems across various domains. Machine learning facilitates the extraction of valuable insights from vast datasets, enabling predictions and automating decision-making processes. Natural Language Processing (NLP) empowers the analysis and comprehension of human language data, facilitating applications like chatbots, sentiment analysis, and language translation. Additionally, proficiency in AWS provides the infrastructure and tools necessary for scalable and efficient cloud computing, facilitating seamless deployment and management of AI applications. Together, these skills enable AI engineers to create impactful solutions that revolutionize industries, enhance user experiences, and foster business growth.</p>
+
+            </div>
+        </div>
+
+
+
+        <div class="Projects">
+            <h4 class="Project">Projects</h4>
+            <div class="project-container">
+                <h4 class="music"><li>Music genre classification</li></h4>
+                <img src="94476Music Genre Classification Project.png" alt="Music Genre Classification" class="project-image">
+                <p>
+                    "Music Genre Classification" is an innovative project aimed at automatically categorizing audio tracks into distinct musical genres. Using machine learning techniques and audio signal processing, this project provides a robust solution for organizing vast music libraries efficiently. By analyzing audio features such as tempo, rhythm, and spectral characteristics, it accurately identifies and labels music tracks, facilitating easier navigation and personalized listening experiences.
+                </p>
+            </div>
+            <div class="project-container">
+                <h4 class="music"><li>E-Notice portal</li></h4>
+                <img src="istockphoto-1226932404-612x612.jpg" alt="E-Notice Portal" class="project-image">
+                <p>The E-Notice Portal is a centralized platform designed to streamline communication within organizations. It offers a user-friendly interface for posting, accessing, and managing notices, announcements, and updates in real-time. With its secure and efficient features, the portal enhances collaboration, ensuring timely dissemination of important information to all stakeholders.</p>
+            </div>
+        </div>
+
+
+
+        <footer>
+
+            <div class="contacts-title">Contact Me :</div>
+            <div class="contact-details">
+                <p><span class="detail-type">Email:</span> yashsute25@gmail.com</p>
+                <p><span class="detail-type">Mobile No:</span> 9021750317</p>
+            </div>
+
+
+            <div class="footer-content">
+                <p>Follow me:</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/yash_sute_2002/"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/in/your-profile-id""><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"></a>
+                    <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>
+                    <a href="#"><img src="https://abs.twimg.com/responsive-web/client-web/icon-ios.b1fc7275.png" alt="Twitter"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Yash Sute Portfolio, 2024. All rights reserved.</p>
+            </div>
+
+        </footer>
+
+
+
+        <script>
+            document.getElementById("downloadResumeBtn").addEventListener("click", function () {
+                // Create a new anchor element
+                var downloadLink = document.createElement("a");
+                // Set the href attribute to the direct download link
+                downloadLink.href = "https://drive.google.com/uc?export=download&id=1oZbMV895iBxmbnbddxooGnJxo5vd7IrS";
+                // Set the download attribute to specify the filename users will see
+                downloadLink.download = "Your_Resume.pdf"; // Adjust filename if needed
+                // Simulate a click event to trigger the download
+                downloadLink.click();
+            });
+
+        </script>
+
+</body>
+</html>
